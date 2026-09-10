@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लाला टेक | Operations hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">↗</div>
+                <div><strong>लाला टेक</strong><span>Operations hub</span></div>
+            </div>
+            <div class="workspace-label">WORKSPACE</div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-item active" data-view="inbox"><span>▦</span> All requests <b id="navCount">8</b></button>
+                <button class="nav-item" data-view="waiting-us"><span>!</span> Waiting for us <b id="waitingUsCount">0</b></button>
+                <button class="nav-item" data-view="waiting-client"><span>↻</span> Waiting on client <b id="waitingClientCount">0</b></button>
+                <button class="nav-item" data-view="unassigned"><span>○</span> Unassigned <b id="unassignedCount">0</b></button>
+                <button class="nav-item" data-view="overdue"><span>!</span> Overdue <b id="overdueCount">0</b></button>
+                <button class="nav-item" data-view="followups"><span>↻</span> Follow-ups <b id="followupCount">3</b></button>
+                <button class="nav-item" data-view="done"><span>✓</span> Completed</button>
+            </nav>
+            <div class="sidebar-bottom">
+                <div class="team-title">YOUR TEAM <button class="icon-button" id="editTeamButton" title="Edit team names">✎</button></div>
+                <div id="teamMembers"></div>
+                <div class="profile"><i class="avatar dark">LT</i><span><strong class="brand-orange">लाला टेक</strong><small>Admin workspace</small></span><span class="more">•••</span></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Requests</strong></div>
+                <div class="top-actions">
+                    <button class="help-button" title="Help">?</button>
+                    <button class="notification-button" title="Notifications">♧<i></i></button>
+                    <button class="user-avatar" id="userAvatar">AK</button>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">THURSDAY, SEPTEMBER 10, 2026</p>
+                        <h1 id="pageTitle">शुभ दोपहर, Arjun <span>✦</span></h1>
+                        <p class="subheading">Here’s what needs your attention today.</p>
+                    </div>
+                    <button class="primary-button" id="openFormButton"><span>+</span> New request</button>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card"><div class="stat-icon ink">▦</div><div><span>Open requests</span><strong id="openStat">8</strong><small class="positive">↑ 2 this week</small></div></article>
+                    <article class="stat-card"><div class="stat-icon red">!</div><div><span>Overdue</span><strong id="dueStat">2</strong><small class="negative">Waiting for us</small></div></article>
+                    <article class="stat-card"><div class="stat-icon yellow">↻</div><div><span>Awaiting follow-up</span><strong id="followStat">3</strong><small>Across 2 clients</small></div></article>
+                    <article class="stat-card"><div class="stat-icon green">✓</div><div><span>Completed this week</span><strong id="completedStat">12</strong><small class="positive">↑ 18% vs last week</small></div></article>
+                </div>
+
+                <div class="toolbar">
+                    <div class="view-tabs"><button class="tab active" data-filter="all">All requests <span id="allCount">8</span></button><button class="tab" data-filter="mine">Assigned to me</button><button class="tab" data-filter="high">High priority <span id="highCount">3</span></button></div>
+                    <div class="toolbar-actions"><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search requests..."></label><select id="sortSelect" aria-label="Sort requests"><option value="updated">Recently updated</option><option value="due">Due date</option><option value="priority">Priority</option></select></div>
+                </div>
+
+                <div class="request-list" id="requestList"></div>
+                <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No requests found</h3><p>Try a different filter or add a new request.</p></div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="modalBackdrop">
+        <form class="request-modal" id="requestForm">
+            <button type="button" class="close-button" id="closeFormButton" aria-label="Close">×</button>
+            <p class="eyebrow">ADD TO WORKSPACE</p><h2>Create a request</h2><p class="modal-subtitle">Capture it once, keep everyone aligned.</p>
+            <label>Request title <input name="title" required placeholder="e.g. Send revised proposal to Acme"></label>
+            <label>Details <textarea name="details" required placeholder="Add useful context, links, or next steps"></textarea></label>
+            <div class="form-row"><label>Client / source <input name="client" required placeholder="Client or channel"></label><label>Due date <input name="due" type="date" required></label></div>
+            <div class="form-row"><label>Assignee <select name="assignee"></select></label><label>Priority <select name="priority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></label></div>
+            <label>Starting status <select name="status"><option value="needs_clarification" selected>Needs clarification</option><option value="ready_to_assign">Ready to assign</option><option value="in_progress">In progress</option><option value="waiting_client">Waiting on client</option></select></label>
+            <button class="primary-button full" type="submit">Create request <span>→</span></button>
+        </form>
+    </div>
+    <div class="modal-backdrop hidden" id="teamModalBackdrop">
+        <form class="request-modal team-modal" id="teamForm">
+            <button type="button" class="close-button" id="closeTeamButton" aria-label="Close">×</button>
+            <p class="eyebrow">WORKSPACE SETTINGS</p><h2>Edit team names</h2><p class="modal-subtitle">These names will appear in the team list and assignee options.</p>
+            <label>Team member 1 <input name="member1" required></label>
+            <label>Team member 2 <input name="member2" required></label>
+            <label>Team member 3 <input name="member3" required></label>
+            <button class="primary-button full" type="submit">Save team names <span>✓</span></button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
