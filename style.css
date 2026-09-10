@@ -9,3 +9,16 @@ body{background:#090909;color:#f5f1ed;font-family:"Noto Sans Devanagari","DM San
 .sidebar,.topbar,.stat-card,.request-card,.request-modal,.toolbar select,.search input,.request-modal input,.request-modal textarea,.request-modal select{background:#141313;color:#f5f1ed}
 .sidebar,.topbar,.stat-card,.request-card,.search,.toolbar select,.request-modal input,.request-modal textarea,.request-modal select{border-color:#302b2a}
 .brand strong,.brand-orange{color:#f28b22}.brand span,.workspace-label,.team-title,.eyebrow,.breadcrumbs,.subheading,.stat-card span,.stat-card small,.meta-date,.request-details,.teammate,.profile small{color:#aaa29c}.brand-mark,.primary-button,.user-avatar{background:#e3262e}.primary-button:hover{background:#b91c24}.nav-item{color:#bcb4af}.nav-item.active{background:#3a1719;color:#ff5a5f}.nav-item.active b{color:#ff5a5f}.nav-item b{color:#8f8782}.tab{color:#aaa29c}.tab.active{color:#ff5a5f}.tab.active:after{background:#e3262e}.tab span{background:#302b2a}.tab.active span{background:#3a1719;color:#ff5a5f}.stat-icon.ink{background:#302b2a;color:#ddd}.stat-icon.red{background:#41191b;color:#ff7378}.stat-icon.yellow{background:#44301b;color:#f2a84f}.stat-icon.green{background:#193a28;color:#65c68b}.tag.client,.status-ready_to_assign,.status-needs_clarification{background:#3a1719;color:#ff7378}.tag.high{background:#41191b;color:#ff7378}.tag.medium{background:#44301b;color:#f2a84f}.tag.low,.status-done{background:#193a28;color:#65c68b}.status-in_progress{background:#172d40;color:#70b4e5}.status-waiting_client{background:#44301b;color:#f2a84f}.request-card:hover{border-color:#a51f25;box-shadow:0 5px 15px #e3262e18}.request-check{background:#141313;border-color:#625957}.request-card.is-done .request-check{background:#3d9d68;border-color:#3d9d68}.close-button,.help-button,.notification-button,.icon-button,.card-menu button{color:#aaa29c}.empty-state h3{color:#f5f1ed}.modal-backdrop{background:#000b}.request-modal{box-shadow:0 20px 60px #000}.profile{border-color:#302b2a}.request-modal label{color:#d3cbc5}.search input::placeholder,.request-modal input::placeholder,.request-modal textarea::placeholder{color:#77706c}
+
+/* Refined Lala Tech monogram */
+.brand{gap:12px}
+.brand-mark{position:relative;width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:#e3262e;box-shadow:0 5px 12px #e3262e35;display:block;overflow:hidden}
+.brand-mark:before,.brand-mark:after{display:none}
+.logo-l,.logo-t{position:absolute;color:#f28b22;font:700 16px "Space Grotesk",sans-serif;line-height:1;transform:none}
+.logo-l{left:9px;top:13px}
+.logo-t{left:19px;top:13px;color:#f28b22}
+.logo-spark{display:none}
+.brand strong{color:#f28b22;font-family:"Noto Sans Devanagari","DM Sans",sans-serif;font-weight:700;letter-spacing:0}
+.brand-mark .logo-l{left:5px;top:10px;color:#f28b22;font:700 14px "Noto Sans Devanagari",sans-serif;letter-spacing:-1.5px}
+.brand strong{font-size:22px;letter-spacing:-.7px}
+.brand span{letter-spacing:.2px}
