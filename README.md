@@ -1,46 +1,15 @@
-# Lala Tech – Client Request Management
+# Boundary Cricket Network
 
-A lightweight web-based request management system designed to help teams track client requests, follow-ups, and completed work.
+A responsive cricket match-center page for watching an MP4 replay.
 
-## 📌 Overview
+## Video
 
-Lala Tech helps teams manage incoming client requests without automatically turning every request into an employee task.
+Place the MP4 in the same folder as `index.html` and name it `video.mp4`. The match replay player and download link use this file.
 
-Some requests require clarification or additional information from the client before work can begin. The system therefore separates requests into different stages so that employees can clearly understand what needs action and what is currently waiting.
+## Preview
 
-## ✨ Features
+Open `index.html` in a browser or use a local static web server. A local server is recommended because browsers may limit video playback when opening a page directly from disk.
 
-- 📥 Track incoming client requests
-- 🔎 Search requests quickly
-- 🔄 Filter requests by status
-- 📋 View follow-up requests
-- ⏳ Keep requests waiting for client information separate from active work
-- ✅ Mark completed work
-- 👤 Assign work only when a request is ready
-- 📊 Sort requests for easier management
-- 💾 Store request data in the application
-- 🖥️ Simple and responsive interface
+## Publish
 
-## 🔁 Request Workflow
-
-A typical request can move through the following stages:
-
-```text
-Client Request
-      │
-      ▼
-Need Clarification?
-   ┌──┴──┐
-  Yes    No
-   │      │
-   ▼      ▼
-Waiting   Ready for Work
-   │      │
-   │      ▼
-   │    Assigned
-   │      │
-   │      ▼
-   │    In Progress
-   │      │
-   │      ▼
-   └──► Completed
+Commit the website and `video.mp4` to the repository's `main` branch. The GitHub Pages workflow deploys the repository contents.
