@@ -3,90 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#10251f">
-    <meta name="description" content="Watch the cricket match replay and highlights at Boundary Cricket Network.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://virmeher.github.io/DevX2.0_Client/">
-    <meta property="og:title" content="Cricket Match Highlights | Boundary Cricket Network">
-    <meta property="og:description" content="Watch the cricket match replay and highlights at Boundary Cricket Network.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Cricket Match Highlights | Boundary Cricket Network">
-    <meta name="twitter:description" content="Watch the cricket match replay and highlights at Boundary Cricket Network.">
-    <title>Cricket Match Highlights | Boundary Cricket Network</title>
+    <meta name="theme-color" content="#f3ecde">
+    <meta name="description" content="Discover handwoven Sambalpuri sarees and Odisha handlooms, made slowly by skilled artisans.">
+    <meta property="og:title" content="Tantu — Sambalpuri Handlooms">
+    <meta property="og:description" content="Stories woven by hand in Odisha. Explore authentic Sambalpuri sarees and handlooms.">
+    <title>Tantu — Sambalpuri Handlooms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-shell">
-        <header class="site-header">
-            <div class="header-top">
-                <a class="site-logo" href="#top" aria-label="Boundary cricket home">
-                    <span class="logo-icon" aria-hidden="true">B</span>
-                    <span>BOUNDARY<span class="logo-subtitle">CRICKET NETWORK</span></span>
-                </a>
-                <span class="broadcast-label"><i aria-hidden="true"></i> MATCH HIGHLIGHTS</span>
+    <div class="announcement"><span>Handwoven in Odisha, loved everywhere</span><span class="announcement-note">Complimentary shipping on orders over ₹5,000</span></div>
+    <header class="site-header">
+        <button class="mobile-menu" id="mobileMenuButton" aria-label="Open menu"><span></span><span></span></button>
+        <a class="wordmark" href="#home" aria-label="Tantu home"><span class="wordmark-symbol">ତ</span><span>TANTU<small>SAMBALPURI HANDLOOMS</small></span></a>
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <a href="#shop">Shop all</a><a href="#story">Our story</a><a href="#craft">The craft</a>
+        </nav>
+        <div class="header-actions">
+            <label class="header-search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search sarees" aria-label="Search sarees"></label>
+            <button class="cart-button" id="openCartButton" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> ROOTED IN SAMBALPUR</p>
+                <h1>A story in<br>every <em>thread.</em></h1>
+                <p class="hero-description">The unmistakable rhythm of Sambalpuri ikat, woven by hand in Odisha and made to be part of your story.</p>
+                <a class="button button-dark" href="#shop">Discover the collection <span>↗</span></a>
+                <div class="hero-note"><span class="handloom-seal">✳</span><span>Handwoven, never hurried.<br><strong>Made by Odisha’s master weavers.</strong></span></div>
             </div>
-            <nav class="site-nav" aria-label="Main navigation">
-                <a href="#top" aria-current="page">MATCH CENTER</a>
-                <a href="#watch">WATCH</a>
-                <a href="#match-info">MATCH INFO</a>
-            </nav>
-        </header>
-
-        <main id="top">
-            <div class="ticker" aria-label="Match coverage">
-                <span>BOUNDARY CRICKET NETWORK &nbsp; • &nbsp; MATCH HIGHLIGHTS &nbsp; • &nbsp; REPLAY THE ACTION &nbsp; • &nbsp; MATCH HIGHLIGHTS &nbsp; • &nbsp; BOUNDARY CRICKET NETWORK</span>
+            <div class="hero-image-wrap">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1400&q=85" alt="Woman wearing a richly colored traditional Indian saree">
+                <div class="hero-image-caption"><span>THE SAMBALPURI EDIT</span><span>01 — 06</span></div>
+                <div class="hero-stamp"><span>ODISHA</span><b>ଓ</b><span>HANDWOVEN</span></div>
             </div>
+            <span class="hero-side-note">A HERITAGE YOU CAN WEAR · EST. SAMBALPUR</span>
+        </section>
 
-            <section class="intro" aria-labelledby="page-title">
-                <div class="intro-copy">
-                    <p class="eyebrow">THE MATCH CENTER <span>·</span> VIDEO REPLAY</p>
-                    <h1 id="page-title">Cricket. <span>Unfiltered.</span></h1>
-                    <p>Settle in for the highlights. The action starts when you press play.</p>
-                </div>
-                <a class="watch-button" href="#watch"><span aria-hidden="true">▶</span> WATCH HIGHLIGHTS</a>
-            </section>
+        <section class="trust-strip" aria-label="Our promise">
+            <span>AUTHENTIC SAMBALPURI IKAT</span><i>✳</i><span>WOVEN ON HANDLOOMS</span><i>✳</i><span>MADE IN ODISHA</span><i>✳</i><span>CRAFTED TO LAST</span>
+        </section>
 
-            <section class="video-section" id="watch" aria-labelledby="video-heading">
-                <div class="section-heading">
-                    <h2 id="video-heading"><span class="live-dot" aria-hidden="true"></span> MATCH REPLAY</h2>
-                    <span class="format-badge">FULL HIGHLIGHTS</span>
-                </div>
-                <div class="video-frame">
-                    <video id="hostedVideo" controls preload="metadata" playsinline>
-                        <source src="video.mp4" type="video/mp4">
-                        Sorry, your browser doesn't support HTML video.
-                    </video>
-                </div>
-                <div class="video-caption">
-                    <div>
-                        <p class="caption-kicker">BOUNDARY BROADCAST</p>
-                        <h3>Match highlights</h3>
-                        <p id="videoStatus" role="status">Loading match video…</p>
-                    </div>
-                    <a class="download-link" href="video.mp4" download>DOWNLOAD CLIP <span aria-hidden="true">↓</span></a>
-                </div>
-            </section>
-
-            <div class="lower-grid" id="match-info">
-                <section class="info-card coverage-card">
-                    <p class="card-kicker">FROM THE BOUNDARY</p>
-                    <h2>Every moment matters.</h2>
-                    <p>Watch the match replay above. Use the player controls to pause, replay a moment, or switch to full screen.</p>
-                </section>
-                <aside class="info-card match-card">
-                    <p class="card-kicker">VIDEO DETAILS</p>
-                    <h2>Match coverage</h2>
-                    <div class="match-detail"><span>FORMAT</span><strong>MP4 replay</strong></div>
-                    <div class="match-detail"><span>QUALITY</span><strong id="videoQuality">Checking video…</strong></div>
-                </aside>
+        <section class="shop-section section-wrap" id="shop">
+            <div class="section-top">
+                <div><p class="eyebrow">THE COLLECTION</p><h2>Wear a little <em>heritage.</em></h2><p class="section-description">Every piece carries the patience of the loom and the spirit of Sambalpur.</p></div>
+                <a class="text-link" href="#shop">Explore all pieces <span>↗</span></a>
             </div>
-        </main>
+            <div class="shop-toolbar">
+                <div class="filter-list" role="group" aria-label="Filter products">
+                    <button class="filter-button active" data-category="All">All pieces</button>
+                    <button class="filter-button" data-category="Sarees">Sarees</button>
+                    <button class="filter-button" data-category="Dupattas">Dupattas</button>
+                    <button class="filter-button" data-category="Stoles">Stoles</button>
+                </div>
+                <label class="sort-control">Sort by <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label>
+            </div>
+            <div class="product-grid" id="productGrid" aria-live="polite"></div>
+            <p class="no-results hidden" id="noResults">No pieces found. Try another search.</p>
+        </section>
 
-        <footer class="site-footer">
-            <a class="footer-brand" href="#top">BOUNDARY <span>CRICKET NETWORK</span></a>
-            <span>ALL THE ACTION. ONE PLAY BUTTON.</span>
-        </footer>
-    </div>
+        <section class="story-section" id="story">
+            <div class="story-photo">
+                <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1000&q=85" alt="Artisan hands working with colorful woven threads">
+                <div class="photo-label">FROM OUR LOOM TO YOUR HOME</div>
+            </div>
+            <div class="story-copy">
+                <p class="eyebrow">MORE THAN A SAREE</p>
+                <h2>Made slowly.<br>Worn <em>forever.</em></h2>
+                <p>Sambalpuri ikat is a conversation between the weaver and the thread. Each yarn is tie-dyed before it reaches the loom, so the pattern appears as if by magic as the cloth takes shape.</p>
+                <p>We work with Odisha’s weaving communities to bring you pieces made with care, respect, and a deep love for the craft.</p>
+                <a class="text-link" href="#craft">Meet the craft <span>↗</span></a>
+                <span class="story-ornament" aria-hidden="true">✳</span>
+            </div>
+        </section>
+
+        <section class="craft-band" id="craft">
+            <div class="craft-heading"><p class="eyebrow">THE ART OF IKAT</p><h2>A pattern with<br>a <em>pulse.</em></h2></div>
+            <div class="craft-detail"><span class="craft-number">01</span><div><h3>Tie-dyed by hand</h3><p>Threads are tied in precise sections and dyed to create the characteristic blurred edges of ikat.</p></div></div>
+            <div class="craft-detail"><span class="craft-number">02</span><div><h3>Woven on a handloom</h3><p>Warp and weft meet patiently, aligning the design one careful pass at a time.</p></div></div>
+            <div class="craft-detail"><span class="craft-number">03</span><div><h3>Made to be treasured</h3><p>No two handwoven pieces are quite alike. The little variations are part of their beauty.</p></div></div>
+        </section>
+
+        <section class="newsletter">
+            <div><p class="eyebrow">NOTES FROM THE LOOM</p><h2>A little craft in your inbox.</h2><p>New arrivals, stories from Sambalpur, and the people behind every weave.</p></div>
+            <form id="newsletterForm"><label for="newsletterEmail" class="visually-hidden">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">Join us <span>→</span></button></form>
+            <p class="newsletter-message" id="newsletterMessage" role="status"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-symbol">ତ</span><span>TANTU<small>SAMBALPURI HANDLOOMS</small></span></a>
+        <p>Honouring the hands that weave our heritage.</p>
+        <span class="footer-copy">© 2026 Tantu. Woven with care in Odisha.</span>
+    </footer>
+
+    <div class="drawer-backdrop hidden" id="cartBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+        <div class="drawer-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button id="closeCartButton" class="close-button" aria-label="Close bag">×</button></div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-empty" id="cartEmpty"><span>✳</span><h3>Your bag is taking a little rest.</h3><p>Find a piece that feels like you.</p><button class="button button-dark" id="continueShopping">Explore the collection</button></div>
+        <div class="cart-footer hidden" id="cartFooter"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><p>Shipping and any applicable taxes are calculated at checkout.</p><button class="button button-dark checkout-button" id="checkoutButton">Continue to order inquiry <span>→</span></button><small>Order inquiries are a demo feature; contact details can be added to enable checkout.</small></div>
+    </aside>
+    <div class="toast" id="toast" role="status"></div>
     <script src="script.js"></script>
 </body>
 </html>
